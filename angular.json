@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myfirstangularapp": {
+    "angular-routing-http-bootstarp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myfirstangularapp",
+            "outputPath": "dist/angular-routing-http-bootstarp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myfirstangularapp:build"
+            "browserTarget": "angular-routing-http-bootstarp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "myfirstangularapp:build:production"
+              "browserTarget": "angular-routing-http-bootstarp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myfirstangularapp:build"
+            "browserTarget": "angular-routing-http-bootstarp:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "myfirstangularapp:serve"
+            "devServerTarget": "angular-routing-http-bootstarp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "myfirstangularapp:serve:production"
+              "devServerTarget": "angular-routing-http-bootstarp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "myfirstangularapp"
+  "defaultProject": "angular-routing-http-bootstarp"
 }

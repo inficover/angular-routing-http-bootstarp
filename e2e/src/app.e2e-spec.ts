@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('myfirstangularapp app is running!');
+    expect(await page.getTitleText()).toEqual('angular-routing-http-bootstarp app is running!');
   });
 
   afterEach(async () => {

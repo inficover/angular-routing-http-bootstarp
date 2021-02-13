@@ -7,7 +7,7 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'myfirstangularapp';
+  title = 'angular-routing-http-bootstarp';
   users;
   constructor() {
 

@@ -1,5 +1,5 @@
 {
-  "name": "myfirstangularapp",
+  "name": "angular-routing-http-bootstarp",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

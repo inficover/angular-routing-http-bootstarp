@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'myfirstangularapp'`, () => {
+  it(`should have as title 'angular-routing-http-bootstarp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('myfirstangularapp');
+    expect(app.title).toEqual('angular-routing-http-bootstarp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('myfirstangularapp app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-routing-http-bootstarp app is running!');
   });
 });
