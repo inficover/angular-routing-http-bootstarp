@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: "root"
 })
 export class UserService {
+  userLoggedIn = false;
   constructor(private http : HttpClient) {}
 
   getUsers() {

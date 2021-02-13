@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 export class AppComponent {
   title = 'angular-routing-http-bootstarp';
   users;
-  constructor() {
+  constructor(public userService: UserService) {
 
   }
 }

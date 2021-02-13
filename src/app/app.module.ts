@@ -11,10 +11,14 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+import { LoginCheckService } from './login-check.service';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'userlist', component: UserListComponent },
+  { path: 'home', component: HomePageComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'userlist', component: UserListComponent , canActivate: [LoginCheckService] },
   { path: 'userdetails/:id', component: UserDetailsComponent },
  ];
 @NgModule({
@@ -22,7 +26,8 @@ const routes: Routes = [
     AppComponent,
     UserListComponent,
     UserDetailsComponent,
-    HomePageComponent
+    HomePageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
