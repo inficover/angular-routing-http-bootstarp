@@ -1,0 +1,9 @@
+<div class="d-flex">
+  <img [src]="user.avatar"/>
+  <div class="d-flex flex-column ml-2">
+    <span>{{user.first_name}}</span>
+    <span>{{user.last_name}}</span>
+    <span>{{user.email}}</span>
+  </div>
+</div>
+<button class="btn mt-2 btn-link" routerLink="/userlist"> Back to List</button>

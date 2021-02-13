@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th></th> -->
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <!-- <td> <img [src]="user.avatar"/></td> -->
+      <td> {{ user.first_name }}</td>
+      <td> {{ user.last_name }}</td>
+      <td> {{ user.email }}</td>
+      <td> <button class="btn btn-link" (click) = 'gotoDetails(user.id)'> View</button></td>
+    </tr>
+
+  </tbody>
+</table>
