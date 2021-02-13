@@ -38,8 +38,7 @@ const routes: Routes = [
     FormsModule,
     CommonModule,
     RouterModule.forRoot(routes, {useHash: true}),
-
-    ToastModule
+    // ToastModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

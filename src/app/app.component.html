@@ -8,11 +8,11 @@
       <a class="nav-link" routerLink="/userlist">Users</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" (click) = 'userService.userLoggedIn= false'>Logout</a>
+      <a class="nav-link" (click) = 'userService.userLoggedIn= false; router.navigate(["login"]);'>Logout</a>
     </li>
   </ul>
 </nav>
-<p-toast></p-toast>
+<!-- <p-toast></p-toast> -->
 <div  style="margin-top: 60px; padding: 1.5rem; height: calc(100vh - 60px);">
   <router-outlet></router-outlet>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { UserService } from './user.service';
 
@@ -11,7 +12,7 @@ import { UserService } from './user.service';
 export class AppComponent {
   title = 'angular-routing-http-bootstarp';
   users;
-  constructor(public userService: UserService) {
+  constructor(public userService: UserService, public router: Router) {
 
   }
 }
