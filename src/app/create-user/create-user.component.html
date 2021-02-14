@@ -1,0 +1,32 @@
+<form [formGroup] = 'userForm' class="form">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input id = 'name' formControlName="name" type="text" class="form-control" placeholder="name"/>
+    <div *ngIf="formSubmitted && f.name.errors" style="color: red;">
+      <div *ngIf="f.name.errors.required">Name required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input id = 'email' formControlName="email" type="text" class="form-control" placeholder="name"/>
+
+    <div *ngIf="formSubmitted &&  f.email.errors" style="color: red;">
+      <div *ngIf="f.email.errors.required">EMail Number required</div>
+      <div *ngIf="f.email.errors.pattern">EMail validation failed</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input id = 'phone' formControlName="phone" type="text" class="form-control" placeholder="name"/>
+
+    <div *ngIf="formSubmitted &&  f.phone.errors" style="color: red;">
+      <div *ngIf="f.phone.errors.required">Phone Number required</div>
+      <div *ngIf="f.phone.errors.pattern">Phone Number should start with 6/7/8/9 and 10 difts</div>
+    </div>
+  </div>
+
+  <button (click) = 'createUser()' class="btn btn-primary">Create</button>
+
+</form>

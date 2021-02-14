@@ -15,4 +15,8 @@ export class UserService {
   getUserById(id) {
     return this.http.get('https://reqres.in/api/users/' + id);
   }
+
+  createUser(user) {
+    return this.http.post('https://reqres.in/api/users/', user);
+  }
 }

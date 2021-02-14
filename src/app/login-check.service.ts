@@ -8,12 +8,10 @@ import { UserService } from './user.service';
 })
 export class LoginCheckService implements CanActivate{
 
-  constructor(private userService: UserService, private router: Router,
-    private messageService: MessageService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   canActivate() {
     if (!this.userService.userLoggedIn) {
-      this.messageService.add({severity:'success', summary:'Please Login', detail:'You need to login before visiting this page'});
       this.router.navigate(['login']);
       return false;
     }

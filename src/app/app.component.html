@@ -8,6 +8,9 @@
       <a class="nav-link" routerLink="/userlist">Users</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link"  (click) = "openDialog()">Create User</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" (click) = 'userService.userLoggedIn= false; router.navigate(["login"]);'> {{ userService.userLoggedIn ? "Log off" : "Log In"}}</a>
     </li>
   </ul>
