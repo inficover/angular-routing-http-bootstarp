@@ -1,9 +1,12 @@
-<div *ngIf = 'user' class="d-flex">
-  <img [src]="user.avatar"/>
+<div *ngIf = 'users$ | async as user; else loading' class="d-flex">
+  <img [src]="(users$ | async).data.avatar"/>
   <div class="d-flex flex-column ml-2">
-    <span>{{user.first_name}}</span>
-    <span>{{user.last_name}}</span>
-    <span>{{user.email}}</span>
+    <span>{{user.data.first_name}}</span>
+    <span>{{user.data.last_name}}</span>
+    <span>{{user.data.email}}</span>
   </div>
 </div>
+<ng-template #loading>
+  <div>Loading ...</div>
+</ng-template>
 <button class="btn mt-2 btn-link" routerLink="/userlist"> Back to List</button>

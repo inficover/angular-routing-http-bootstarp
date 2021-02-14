@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { UserService } from '../user.service';
+import { Observable } from 'rxjs';
+import { UserService, User, UserResp } from '../user.service';
 
 @Component({
   selector: 'app-user-details',
@@ -9,13 +10,11 @@ import { UserService } from '../user.service';
 })
 export class UserDetailsComponent implements OnInit {
 
-  constructor(public route: ActivatedRoute, private userService: UserService) { }
-  user;
+  constructor(public route: ActivatedRoute, public userService: UserService) { }
+  users$ : Observable<UserResp>;
   ngOnInit(): void {
     this.route.params.subscribe((routeParams) => {
-      this.userService.getUserById(routeParams.id).subscribe((user:any) => {
-        this.user = user.data;
-      })
+      this.users$ = this.userService.getUserById(routeParams.id) as Observable<UserResp>;
     });
   }
 
