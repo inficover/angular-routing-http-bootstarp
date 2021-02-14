@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',
-  styleUrls: ['./create-user.component.scss']
+  styleUrls: ['./create-user.component.scss'],
 })
 export class CreateUserComponent implements OnInit {
 
-  constructor(public formBuilder: FormBuilder, private userService: UserService) { }
+  constructor(public formBuilder: FormBuilder, private userService: UserService,
+    public dialogRef: MatDialogRef<CreateUserComponent>) { }
 
   userForm : FormGroup;
   formSubmitted = false;
@@ -41,7 +43,7 @@ export class CreateUserComponent implements OnInit {
     }
     const user = this.userForm.value;
     this.userService.createUser(user).subscribe(data => {
-      console.log(data);
+      this.dialogRef.close();
     });
   }
 }
