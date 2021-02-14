@@ -1,4 +1,4 @@
-<div class="d-flex">
+<div *ngIf = 'user' class="d-flex">
   <img [src]="user.avatar"/>
   <div class="d-flex flex-column ml-2">
     <span>{{user.first_name}}</span>
